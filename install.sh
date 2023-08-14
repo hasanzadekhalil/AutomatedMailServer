@@ -40,7 +40,7 @@ if ! [ -x "$(command -v docker)" ]; then
 fi
 
 # Check if Docker Compose is installed, if not, install it
-if ! command -v docker-compose &> /dev/null; then
+if ! command -v /usr/local/bin/docker-compose &> /dev/null; then
     echo "Docker Compose is not installed. Downloading and installing Docker Compose..."
     curl -fsSL https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
@@ -407,7 +407,7 @@ echo "Mailu configuration files have been created."
 # Run docker-compose to start Mailu
 echo "Starting Mailu..."
 cd /mailu
-docker-compose up -d
+/usr/local/bin/docker-compose up -d
 
 echo "Mailu has been successfully started."
 echo "You can access the admin interface at: http://mail.$DOMAIN/admin"
