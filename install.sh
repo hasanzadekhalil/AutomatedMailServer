@@ -47,17 +47,6 @@ if ! command -v docker-compose &> /dev/null; then
     echo "Docker Compose has been successfully installed."
 fi
 
-# Check DNS records before proceeding
-echo "Checking DNS records for $DOMAIN..."
-DNS_RECORDS=$(dig +short $DOMAIN)
-if [ -z "$DNS_RECORDS" ]; then
-    echo "No DNS records found for $DOMAIN. Please ensure the DNS is properly configured."
-    exit 1
-else
-    echo "DNS records found:"
-    echo "$DNS_RECORDS"
-fi
-
 # Create a directory for Mailu
 mkdir -p /mailu/{redis,overrides,dkim,data,mail,certs,webmail,filter}
 
