@@ -5,15 +5,27 @@ export LC_ALL=C.UTF-8
 # Prompt the user for the domain name
 read -p "Please enter the domain name (e.g., example.com): " DOMAIN
 
+IP=$(curl -s http://checkip.amazonaws.com)
+echo "Record Type: A, @ domain Bind to > $IP 
+Record Type: A, mail.$DOMAIN @ Bind #!/bin/bashto > $IP 
+Record Type: MX, @ Bind to > mail.$DOMAIN"
+read -p "Please Verify above records, After Verify Click any button for continue..."
+
 # Prompt the user for the admin password
 read -sp "Please enter the admin password: " AdminPassword
 echo
 
-# Check if curl is installed and install if not
 if ! [ -x "$(command -v curl)" ]; then
     echo "curl is not installed. Installing curl..."
-    sudo apt-get update
-    sudo apt-get install curl -y
+    if [ -x "$(command -v apt-get)" ]; then
+        sudo apt-get update
+        sudo apt-get install curl -y
+    elif [ -x "$(command -v yum)" ]; then
+        sudo yum install curl -y
+    else
+        echo "Package manager not found. Please install curl manually."
+        exit 1
+    fi
     echo "curl has been successfully installed."
 fi
 
