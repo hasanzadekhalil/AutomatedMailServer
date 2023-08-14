@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export LC_ALL=C.UTF-8
-
 # Prompt the user for the domain name
 read -p "Please enter the domain name (e.g., example.com): " DOMAIN
 
