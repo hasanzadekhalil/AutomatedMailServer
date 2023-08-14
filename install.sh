@@ -5,7 +5,7 @@ read -p "Please enter the domain name (e.g., example.com): " DOMAIN
 
 IP=$(curl -s http://checkip.amazonaws.com)
 echo "Record Type: A, @ domain Bind to > $IP 
-Record Type: A, mail.$DOMAIN @ Bind #!/bin/bashto > $IP 
+Record Type: A, mail.$DOMAIN @ Bind to > $IP 
 Record Type: MX, @ Bind to > mail.$DOMAIN"
 read -p "Please Verify above records, After Verify Click any button for continue..."
 
