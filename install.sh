@@ -47,6 +47,10 @@ if ! command -v /usr/local/bin/docker-compose &> /dev/null; then
     echo "Docker Compose has been successfully installed."
 fi
 
+# Start and Enable Docker Services
+systemctl start docker
+systemctl enable docker
+
 # Create a directory for Mailu
 mkdir -p /mailu/{redis,overrides,dkim,data,mail,certs,webmail,filter}
 
@@ -142,7 +146,7 @@ services:
     image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}postfix:${MAILU_VERSION:-2.0}
     restart: always
     env_file: mailu.env
-        logging:
+    logging:
       driver: journald
       options:
         tag: mailu-smtp
