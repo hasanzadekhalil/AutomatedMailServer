@@ -1,4 +1,4 @@
-  GNU nano 6.2                                                                                                                                                                                                                 script.sh                                                                                                                                                                                                                          #!/bin/bash
+#!/bin/bash
 
 export LC_ALL=C.UTF-8
 
