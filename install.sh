@@ -1,5 +1,8 @@
 #!/bin/bash
-
+clear
+echo -e "\033[1;31m\033[5mThis Script Created by: Khalil Hasanzade\033[0m"
+sleep 5
+clear
 # Prompt the user for the domain name
 read -p "Please enter the domain name (e.g., example.com): " DOMAIN
 
