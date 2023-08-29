@@ -15,6 +15,7 @@ When you run the script, it will prompt you to set up the domain name and admin 
 7. 
 The script automates these tasks, making the setup process smooth and efficient.
 
+```
 cd /tmp
 git clone https://github.com/hasanzadekhalil/AutomatedMailServer.git
 cd AutomatedMailServer
