@@ -12,7 +12,7 @@ When you run the script, it will prompt you to set up the domain name and admin 
 4. Asks for the domain name and admin password from you, which it uses during the installation.
 5. After completion, it provides the list of DNS records that need to be added.
 6. Handles the installation of an SSL certificate.
-7. 
+   
 The script automates these tasks, making the setup process smooth and efficient.
 
 ```
