@@ -1,6 +1,6 @@
 Author
 ===
-This project was made by Khalil Hasanzade with helping Mailu Docker.
+This project was made by Khalil Hasanzade with helping Mailu Docker Image.
 
 Automated Mail Server
 ====
